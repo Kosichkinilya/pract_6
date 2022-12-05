@@ -8,6 +8,7 @@ namespace ПР6
 {
     internal class Pair
     {
+        // поля 
         private int _oneValue;
         private int _twoValue;
 
@@ -45,6 +46,8 @@ namespace ПР6
             }
         }
 
+
+        // пергрузка операторов 
         public Pair Multiplication(Pair FirstPair)
         {
             return new Pair(OneValue * FirstPair.OneValue, TwoValue * FirstPair.TwoValue);

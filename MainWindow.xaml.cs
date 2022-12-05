@@ -34,11 +34,21 @@ namespace ПР6
         {
             Close();
         }
+        private void Clear_All(object sender, RoutedEventArgs e)
+        {
+            Input_FirstPair_1.Clear();
+            Input_FirstPair_2.Clear();
+            Input_SecondPair_1.Clear();
+            Input_SecondPair_2.Clear();
+            Res_Multiplication.Clear();
+            FirstPair_Sum.Clear();
+            SecondPair_Sum.Clear();
+        }
 
         Pair pair1 = new Pair(default, default);
         Pair pair2 = new Pair(default, default);
 
-        private void Multiplication_Click(object sender, RoutedEventArgs e)
+        private void Multiplication_Click(object sender, RoutedEventArgs e) // умножение
         {
             try
             {
@@ -62,10 +72,11 @@ namespace ПР6
                     MessageBox.Show("Введите целое число");
                     Input_SecondPair_2.Clear();
                 }
-                pair1 = new Pair(Fp1, Fp2);
-                pair2 = new Pair(Sp1, Sp2);
-                Pair pair = pair1.Multiplication(pair2);
-                Res_Multiplication.Text = $"{pair.OneValue} {pair.TwoValue}";
+                //вывод
+                pair1 = new Pair(Fp1, Fp2);//
+                pair2 = new Pair(Sp1, Sp2);//
+                Pair pair = pair1.Multiplication(pair2);//
+                Res_Multiplication.Text = $"{pair.OneValue} {pair.TwoValue}";// доллар что это?
             }
             catch (Exception)
             {
@@ -73,7 +84,7 @@ namespace ПР6
             }
         }
 
-        private void Sum_pair_Click(object sender, RoutedEventArgs e)
+        private void Sum_pair_Click(object sender, RoutedEventArgs e) // сумма пар 
         {
             try
             {

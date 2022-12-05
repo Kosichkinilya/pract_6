@@ -5,10 +5,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ПР6"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    ResizeMode="NoResize"
     Title="Практическая №6"
-    Width="800"
-    Height="450"
+    Width="475"
+    Height="350"
     mc:Ignorable="d">
+    
     <Grid>
         <Menu Height="20" VerticalAlignment="Top">
             <MenuItem Header="Файл">
@@ -16,6 +18,10 @@
                     x:Name="Exit"
                     Click="Exit_Click"
                     Header="Выход" />
+                <MenuItem
+                    x:Name="Clear_Tb"
+                    Click="Clear_All"
+                    Header="Очистить" />
             </MenuItem>
             <MenuItem Header="Справка">
                 <MenuItem
@@ -28,7 +34,7 @@
             x:Name="Input_FirstPair_1"
             Width="71"
             Height="44"
-            Margin="173,139,0,0"
+            Margin="7,72,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
@@ -38,7 +44,7 @@
             x:Name="Input_FirstPair_2"
             Width="71"
             Height="44"
-            Margin="249,139,0,0"
+            Margin="83,72,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
@@ -48,7 +54,7 @@
             x:Name="Input_SecondPair_1"
             Width="71"
             Height="44"
-            Margin="471,139,0,0"
+            Margin="305,72,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
@@ -58,7 +64,7 @@
             x:Name="Input_SecondPair_2"
             Width="71"
             Height="44"
-            Margin="549,139,0,0"
+            Margin="383,72,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
@@ -66,8 +72,8 @@
             ToolTip="Второе число" />
         <TextBlock
             Width="143"
-            Height="58"
-            Margin="173,74,0,0"
+            Height="42"
+            Margin="7,25,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Text="Введите первую пару чётных чисел:"
@@ -75,8 +81,8 @@
             TextWrapping="Wrap" />
         <TextBlock
             Width="143"
-            Height="58"
-            Margin="471,74,0,0"
+            Height="42"
+            Margin="305,25,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Text="Введите вторую пару чётных чисел:"
@@ -84,33 +90,33 @@
             TextWrapping="Wrap" />
         <Button
             x:Name="Multiplication"
-            Width="441"
-            Margin="173,0,0,0"
+            Width="447"
+            Margin="7,134,0,0"
             HorizontalAlignment="Left"
-            VerticalAlignment="Center"
+            VerticalAlignment="Top"
             Click="Multiplication_Click"
-            Content="Перемножить пары" />
+            Content="Перемножить пары" Height="39" />
         <Button
             x:Name="Sum_pair"
-            Width="441"
-            Margin="173,245,0,0"
+            Width="444"
+            Margin="10,187,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="Sum_pair_Click"
-            Content="Сложить числа пар" />
+            Content="Сложить числа пар" Height="38" />
         <TextBox
             x:Name="Res_Multiplication"
             Width="143"
             Height="44"
-            Margin="173,333,0,0"
+            Margin="7,256,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
             TextWrapping="Wrap" />
         <TextBlock
             Width="143"
-            Height="42"
-            Margin="173,286,0,0"
+            Height="15"
+            Margin="10,230,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Text="Результат перемножения:"
@@ -120,7 +126,7 @@
             x:Name="FirstPair_Sum"
             Width="125"
             Height="44"
-            Margin="353,333,0,0"
+            Margin="187,256,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
@@ -129,7 +135,7 @@
             x:Name="SecondPair_Sum"
             Width="130"
             Height="44"
-            Margin="484,333,0,0"
+            Margin="324,256,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
@@ -137,7 +143,7 @@
         <TextBlock
             Width="261"
             Height="21"
-            Margin="353,307,0,0"
+            Margin="187,230,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Text="Суммированные числа пар:"
