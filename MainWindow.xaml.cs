@@ -35,12 +35,13 @@ namespace ПР6
             Close();
         }
 
-        Pair pair1 = new Pair(default, default);
+        Pair pair1 = new Pair(default, default); // создаем обьект класса с дефолтными значениями 
         Pair pair2 = new Pair(default, default);
 
         private void Multiplication_Click(object sender, RoutedEventArgs e)
         {
-            try
+            try // пытаемся 
+   
             {
                 if (!int.TryParse(Input_FirstPair_1.Text, out int Fp1))
                 {
@@ -62,12 +63,12 @@ namespace ПР6
                     MessageBox.Show("Введите целое число");
                     Input_SecondPair_2.Clear();
                 }
-                pair1 = new Pair(Fp1, Fp2);
+                pair1 = new Pair(Fp1, Fp2); // присваиваю новое значение обьекту класса 
                 pair2 = new Pair(Sp1, Sp2);
-                Pair pair = pair1.Multiplication(pair2);
-                Res_Multiplication.Text = $"{pair.OneValue} {pair.TwoValue}";
+                Pair pair = pair1.Multiplication(pair2); // использую перегруженный метод с параметрами 
+                Res_Multiplication.Text = $"{pair.OneValue} {pair.TwoValue}"; // вывожу 
             }
-            catch (Exception)
+            catch (Exception) // поймали исключение 
             {
                 MessageBox.Show("Свойство должно быть чётным");
             }
@@ -97,12 +98,12 @@ namespace ПР6
                     MessageBox.Show("Введите целое число");
                     Input_SecondPair_2.Clear();
                 }
-                pair1 = new Pair(Fp1, Fp2);
+                pair1 = new Pair(Fp1, Fp2); // присваиваю новое значеине обьекту класса 
                 pair2 = new Pair(Sp1, Sp2);
-                pair1++;
+                pair1++; // увеличиваем паир1 на 1 
                 pair2++;
-                FirstPair_Sum.Text = $"{pair1.OneValue}";
-                SecondPair_Sum.Text = $"{pair2.OneValue}";
+                FirstPair_Sum.Text = $"{pair1.OneValue}";  // вывод
+                SecondPair_Sum.Text = $"{pair2.OneValue}"; // вывод 
             }
             catch (Exception)
             {
